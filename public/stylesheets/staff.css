@@ -1,0 +1,29 @@
+/* This is the stylesheet for th epublic area              */
+/* It is intended to be supplemental to sblog.css    */
+
+ 
+ .categorylist { width:200px;  color: #000000; height: 100px ;  }*/
+ .categorylist h2 { font-size: 16px;  margin: 0;  padding: 3px; border-bottom: 1px solid #000000; color: #000000 }
+ .userlist {height: 40em;  margin: 0 0 3em 10px;   }
+ .userlist .listing { height: 40em;  font-size: 1.1em;   }
+ .userlist.left { float: left; width: 700px; background-color: #DDDDDD; }
+ .userlist.right { float: right; width: 530px; color:   #000000 ; background-color: #DDDDDD; }
+ 
+ .comment { padding: .5em 1em .5em 1em; } 
+ .comment-lead  { font-size: .75em; }
+ .comment-text { padding: .5em .5em 1em .5em;  }
+ 
+ 
+ .menu { font-size: 20px; position: relative; padding: 0; height: 21px; margin-left: 520px; margin-top: 8em; }
+ .menu li a { color: #999; font-weight: normal; padding:4px 5px; }
+ .menu li a:hover { color: #000; text-decoration: none; }
+
+#login-form {     
+      font-size: 20px; 
+      position: relative; 
+      padding: 0; 
+      height: 21px; 
+      margin-left: 520px; 
+      margin-top: 8em;
+      color:  #000000;   
+}

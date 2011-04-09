@@ -1,0 +1,38 @@
+This is just a test........I've copied the _form into show and the _form.rhtml works fine 
+...and _listing.rhtml works fine, but independently...
+when they are in manage.rhtml... NoMethodError Pops up
+
+ when i ask users/manage  it's actually showing users/show....not sure y...but if delete the show.rhtml....i get the error
+<table>
+    <tr>
+           <td>First Name</td>
+           <td><%= text_field(:user, :first_name  ) %></td> 
+    </tr>       
+    <tr>
+            <td>Last Name</td>
+            <td><%= text_field(:user, :last_name )  %></td>
+    </tr>      
+    <tr>
+             <td>Display Name</td>
+             <td><%= text_field(:user, :display_name )  %></td>
+      </tr>  
+     <tr>
+             <td>Email</td>
+             <td><%= text_field(:user, :email )  %></td>
+      </tr>   
+      <tr>
+             <td>Username</td>
+             <td><%= text_field(:user, :username )  %></td>
+      </tr>
+      <tr>
+             <td>Password</td>
+             <td><%= text_field(:user, :hashed_password )  %></td>
+      </tr>            
+      <tr>
+             <td>User Level</td>
+             <td><%= select(:user, :user_level, (0..9).to_a.reverse ) %></td>
+      </tr>
+      
+       
+</table>               
+            

@@ -1,0 +1,9 @@
+<% @page_title = 'New Post' -%>
+
+<%= content_tag('p', link_to('Back', :action => 'index') ) %>
+
+<%= form_tag(:action => 'create' )   do -%>
+                <%= render(:partial => 'form' )  %>    
+                <%= submit_tag('Create') %>
+<% end -%>
+  

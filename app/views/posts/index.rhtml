@@ -1,0 +1,33 @@
+<% @page_title = 'Listing Posts' %>
+
+<p> <%= link_to( 'Back', :controller => 'staff', :action => 'menu'  ) %></p>
+
+<table>
+  <tr>
+    <th>Created </th>
+    <th>Title</th>
+    <th>Author</th>
+     <th>Categories</th>
+     <th>Status</th>
+     <th>Comments</th>
+  </tr>
+
+<% for post in @posts %>
+    <tr class="<%= cycle('row1', 'row2')%>">
+         <td><%= post.created_at.strftime('%m/%d/%y %I:%m %p' )  %></td>
+          <td><%= h(post.title) %></td>
+          <td><%= h(post.author.display_name) if post.author %></td>
+          <td><%= post.categories.collect {|cat| cat.name }.join(", ")  %>
+          <td><%= h(post.status) %></td>
+          <td><%= post.comments_count %>
+          <td><%= link_to('Preview', {:action => 'show', :id => post }, :target => '_blank'  ) %></td>
+          <td><%= link_to('Edit', :action =>'edit', :id => post  ) %></td>
+          <td><%= link_to( 'Delete', { :action => 'destroy', :id => post}, :confirm => 'Are you sure you want to remove this Post? ', :method => :post) %></td>
+      </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New  post', new_post_path %>

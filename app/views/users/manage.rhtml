@@ -1,0 +1,34 @@
+ <% @page_title = 'Current Users' -%>
+
+ <%= content_tag('p', link_to('Back', :controller => 'staff', :action => 'menu' ))%>
+
+<div class="userlist left">
+ <%= render :partial => 'listing' %>
+</div>
+<div class="userlist right">  
+            <% if params[:id].blank? %>
+               <h1>New User</h1>
+             
+               <%= form_tag(:action => 'manage') do  %>
+                     <%=  render :partial => 'form'   %>
+                     <%=  submit_tag "Create" %>
+                <% end %>     
+          
+       <% else %>      
+               <h1>Editing User</h1>
+                 
+               <%= form_tag( :action => 'manage', :id => @user) do %>
+                     <%= render :partial => "form"  %>
+                     <%= submit_tag 'Edit'  %>
+               <% end -%>
+               
+               <%= link_to('Destroy User', { :action => 'destroy', :id => @user  },
+                                          :confirm => 'Are You sure?', 
+                                          :method => :destroy)  %>
+                                    
+     <% end %>                                
+    
+     <%= link_to('Back', :action => 'index' )%>
+       
+</div>
+

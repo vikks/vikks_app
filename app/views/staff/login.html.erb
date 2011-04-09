@@ -1,0 +1,8 @@
+<% @page_title = 'Staff Area Login' -%>
+<div id="login-form">
+    <%= form_tag(:action => 'send_login')  do  -%>
+        <p>Username: <%= text_field_tag('username', params[:username]) %></p>
+        <p>Password: <%= password_field_tag('password')   %></p>
+        <%= submit_tag("Login")  %>
+    <% end -%>    
+</div>    

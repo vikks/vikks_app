@@ -1,0 +1,43 @@
+<%  @page_title =  'Categories' -%>
+
+             <%= content_tag('p', link_to('Back', :controller => 'staff', :action => 'menu' ))  %>
+              <%= content_tag( 'p',  link_to('Refresh', :controller => 'categories' )) %>  
+
+<table>
+        <tr>
+          <th>Name</th>
+          <th>Short Name</th>
+          <th>Description</th>
+        </tr>
+
+        <% @categories.each do |category| %>
+          <tr class="<%= cycle('row1', 'row2') %>" >
+            <td><%= h(category.name)  %></td>
+            <td><%= h(category.short_name) %></td>
+            <td><%= h(category.description) %></td>
+            <td><%= link_to('Edit', :action => 'index', :id =>category  ) %></td>    
+            <td><%= link_to( 'Destroy', { :action => 'destroy', :id => category }, :confirm => 'Are you sure?', :method => :destroy) %></td>
+          </tr>
+        <% end %>
+    </table>
+
+<%= form_tag(params[:id].blank? ? { :action => 'create' }  :  { :action => 'update',  :id => @category } ) do %>
+         
+         
+ <table>
+       <tr>
+                 <th>Name</th>
+                 <th>Short Name</th>
+                 <th>Description</th>
+        </tr>
+        <tr>
+            <td><%= text_field(:category, :name, :size =>20)   %> </td>        
+            <td><%= text_field(:category, :short_name, :size =>20) %></td>
+            <td><%= text_field(:category, :description, :size =>40) %></td>
+            <td><%= submit_tag(params[:id].blank? ? "Create" :  "Edit" ) %></td>
+      </tr>
+  </table>
+ 
+<% end %>          
+                      
+                      

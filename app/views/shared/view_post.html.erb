@@ -1,0 +1,23 @@
+<div id="left-column">
+            <p><%= link_to("Back to Main Page", {:action =>'index'}, :style => 'font-size: .8em'  )  %></p>
+            <%= render(:partial => 'shared/post', :locals => {:post => @post } ) %>
+
+             <div class="comments">
+               <a name="comments"></a>
+                <%= render(:partial => 'shared/comment', :collection => @post.approved_comments   )   %>
+            </div>  
+</div>
+             <%  if !@comment.blank? -%>
+                   <div class= "comment-form">
+                     <% form_tag(:action => 'add_comment',  :id => @post.id )   do -%>
+                                <%=   render(:partial  => 'shared/comment_form')    %>
+                                <%= submit_tag("Submit Comment",  :style => "margin-left: 140px; " )  -%>
+                      <% end -%>          
+                    </div>  
+              <% end -%>
+
+<div id="right-column">
+        <%#  if !@archive_list.nil?   %>    
+                 <%#= render(:partial => 'shared/right_column' ) %>
+        <%# end -%>
+</div>

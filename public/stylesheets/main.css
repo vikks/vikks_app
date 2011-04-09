@@ -1,0 +1,33 @@
+/* This is the stylesheet for th epublic area              */
+/* It is intended to be supplemental to sblog.css    */
+
+ #left-column { float: left; width:  66%;  margin: 2em 1em; padding: .5em 5em .5em 5em; color:#000000; } 
+ #right-column{ float: right; width: 22%; position: relative;  z-index: 90; padding: 0; margin: 0; }
+
+
+.post, .comments {  margin: 1em;  padding-bottom:  1em;  border-bottom: 1px  dashed #004080; background: #999999; } 
+
+ .post { width:900px; min-height:10px; border: 1px  dashed #004080 ; color: #DDDDDD; background: #333333  ;  margin: 1em 0;  font-family: Verdana, sans-serif;  font-size: 1.2em; font-weight:normal}
+.post .title { font-size: 1.2em; font-weight: bold;}
+.post .author { font-size: .8em; }
+.post .date { font-size : .8em; }
+.post .body { margin: 1em 0; }
+.post .categories { font-size : .8em; }
+ .post .comment-summary {  font-size: .8em; color:#FF0000;} 
+
+
+.comment .comment-lead { font-size: .8em; color: #004080;}
+.comment .comment-text { margin-top: 1em; margin-left: 1em; color: #000000 ;  }
+.comment-form { margin:  7em; color :#000000;  } 
+.comment-name {color :#ffffff;}
+
+.about { font-size: .8em;  color: #004080;  padding-top:  4em; } 
+
+#categories,  #archive-list {font-size: 1em;  color: #004080; }
+#categories h4,  #archive-list h4 { margin-bottom: 0;  }
+#categories ul,  #archive-list ul { margin: .001em 0;  padding-left: 0; list-style: none;   }
+
+
+a, a:link, a:visited{ color: #759FCF; text-decoration: none; }
+a:hover, a:active{ color: #c61a1a; text-decoration: underline;}
+a img{ border: 0; }
